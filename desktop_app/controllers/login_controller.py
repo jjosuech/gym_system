@@ -17,6 +17,15 @@ class LoginController(QDialog):
         self.ui = loader.load(ui_file)
         ui_file.close()
 
+        # CURSOR AL INICIO SI ESTA VACIO
+        self.ui.lblUser.cursorPositionChanged.connect(
+            lambda: self.colocar_cursor_inicio(self.ui.lblUser)
+        )
+
+        self.ui.lblPassword.cursorPositionChanged.connect(
+            lambda: self.colocar_cursor_inicio(self.ui.lblPassword)
+        )
+
         #btn
         self.ui.btnIngresar.clicked.connect(self.login)
         self.ui.btnCancelar.clicked.connect(self.close)
@@ -31,6 +40,11 @@ class LoginController(QDialog):
         self.main_window.show()
         #cerrar login ventana
         self.ui.close()
+
+    
+    def colocar_cursor_inicio(self, input_text):
+        if input_text.text() == "":
+            input_text.setCursorPosition(0)
     
     def close(self):
         self.ui.close()

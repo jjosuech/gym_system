@@ -1,60 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>login</class>
+
  <widget class="QDialog" name="login">
+
+  <!-- VENTANA -->
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>406</width>
-    <height>308</height>
+    <height>341</height>
    </rect>
   </property>
+
   <property name="windowTitle">
    <string>Login</string>
   </property>
+
+  <!-- ICONO DE LA VENTANA -->
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>assets/newLogo.png</normaloff>
+   </iconset>
+  </property>
+
+  <!-- COLOR DE FONDO -->
+  <property name="styleSheet">
+   <string notr="true">
+
+QDialog{
+    background-color: #2b2b2b;
+}
+
+/* BOTONES */
+QPushButton{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border-radius: 6px;
+    height: 28px;
+}
+
+QPushButton:hover{
+    background-color: #f5e7d3;
+}
+
+/* INPUTS */
+QLineEdit{
+    background-color: white;
+    color: black;
+    border: 2px solid #d8c3a5;
+    border-radius: 5px;
+    padding-left: 5px;
+    font-size: 11pt;
+}
+
+/* LABELS */
+QLabel{
+    color: white;
+    font-weight: bold;
+}
+
+   </string>
+  </property>
+
+  <!-- BOTON INGRESAR -->
   <widget class="QPushButton" name="btnIngresar">
    <property name="geometry">
     <rect>
      <x>100</x>
-     <y>200</y>
-     <width>75</width>
-     <height>23</height>
+     <y>290</y>
+     <width>90</width>
+     <height>30</height>
     </rect>
    </property>
+
    <property name="text">
     <string>Ingresar</string>
    </property>
   </widget>
+
+  <!-- INPUT USUARIO -->
   <widget class="QLineEdit" name="lblUser">
    <property name="geometry">
     <rect>
      <x>200</x>
-     <y>80</y>
-     <width>113</width>
-     <height>20</height>
+     <y>170</y>
+     <width>140</width>
+     <height>30</height>
     </rect>
    </property>
+
+   <!-- SOLO NUMEROS -->
+   <property name="inputMask">
+    <string>9999999999</string>
+   </property>
   </widget>
+
+  <!-- INPUT PASSWORD -->
   <widget class="QLineEdit" name="lblPassword">
    <property name="geometry">
     <rect>
      <x>200</x>
-     <y>140</y>
-     <width>113</width>
-     <height>20</height>
+     <y>230</y>
+     <width>140</width>
+     <height>30</height>
     </rect>
    </property>
+
+   <!-- SOLO NUMEROS -->
+   <property name="inputMask">
+    <string>9999999999</string>
+   </property>
   </widget>
+
+  <!-- LABEL USUARIO -->
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>90</x>
-     <y>80</y>
-     <width>71</width>
-     <height>21</height>
+     <x>70</x>
+     <y>170</y>
+     <width>110</width>
+     <height>30</height>
     </rect>
    </property>
+
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignVCenter</set>
+   </property>
+
    <property name="font">
     <font>
      <pointsize>12</pointsize>
@@ -62,25 +137,27 @@
      <bold>true</bold>
     </font>
    </property>
+
    <property name="text">
     <string>Usuario:</string>
    </property>
-   <property name="textFormat">
-    <enum>Qt::AutoText</enum>
-   </property>
-   <property name="scaledContents">
-    <bool>false</bool>
-   </property>
   </widget>
+
+  <!-- LABEL PASSWORD -->
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>90</x>
-     <y>140</y>
-     <width>101</width>
-     <height>21</height>
+     <x>40</x>
+     <y>230</y>
+     <width>140</width>
+     <height>30</height>
     </rect>
    </property>
+
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignVCenter</set>
+   </property>
+
    <property name="font">
     <font>
      <pointsize>12</pointsize>
@@ -88,30 +165,61 @@
      <bold>true</bold>
     </font>
    </property>
+
    <property name="text">
     <string>Contraseña:</string>
    </property>
-   <property name="textFormat">
-    <enum>Qt::AutoText</enum>
-   </property>
-   <property name="scaledContents">
-    <bool>false</bool>
-   </property>
   </widget>
+
+  <!-- BOTON CANCELAR -->
   <widget class="QPushButton" name="btnCancelar">
    <property name="geometry">
     <rect>
      <x>220</x>
-     <y>200</y>
-     <width>75</width>
-     <height>23</height>
+     <y>290</y>
+     <width>90</width>
+     <height>30</height>
     </rect>
    </property>
+
    <property name="text">
     <string>Cancelar</string>
    </property>
   </widget>
+
+  <!-- LOGO -->
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>10</y>
+     <width>161</width>
+     <height>131</height>
+    </rect>
+   </property>
+
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>120</height>
+    </size>
+   </property>
+
+   <property name="text">
+    <string/>
+   </property>
+
+   <property name="pixmap">
+    <pixmap>assets/newLogo.png</pixmap>
+   </property>
+
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+
  </widget>
+
  <resources/>
  <connections/>
 </ui>

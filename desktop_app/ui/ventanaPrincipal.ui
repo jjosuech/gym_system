@@ -13,6 +13,44 @@
   <property name="windowTitle">
    <string>Ventana Principal</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>assets/newLogo.png</normaloff>assets/newLogo.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+
+QMainWindow{
+    background-color: #2b2b2b;
+}
+
+/* AREA CENTRAL */
+QWidget{
+    background-color: #2b2b2b;
+}
+
+/* BOTONES */
+QPushButton{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 2px solid #d8c3a5;
+}
+
+QPushButton:hover{
+    background-color: #f5e7d3;
+}
+
+/* LABELS */
+QLabel{
+    color: white;
+    font-weight: bold;
+    font-size: 11pt;
+}
+
+ </string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="btnregistrarCliente">
     <property name="geometry">
@@ -117,10 +155,10 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>560</x>
+      <x>536</x>
       <y>10</y>
-      <width>47</width>
-      <height>13</height>
+      <width>71</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
@@ -133,7 +171,7 @@
       <x>610</x>
       <y>10</y>
       <width>181</width>
-      <height>16</height>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
@@ -144,7 +182,7 @@
     <property name="geometry">
      <rect>
       <x>710</x>
-      <y>30</y>
+      <y>40</y>
       <width>75</width>
       <height>23</height>
      </rect>
